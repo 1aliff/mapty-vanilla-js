@@ -11,8 +11,6 @@ const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 
-// ====== below is the code that i have refactor ====== //
-
 let map, mapEvent;
 
 if(navigator.geolocation)
@@ -66,6 +64,7 @@ if(navigator.geolocation)
         .openPopup();
     })
 
+    // the part that still need to update //
     inputType.addEventListener('change', () => { 
         inputElevation.closest('.form__row').classList.toggle('form_row--hidden');
         inputCadence.closest('.form__row').classList.toggle('form_row--hidden');
